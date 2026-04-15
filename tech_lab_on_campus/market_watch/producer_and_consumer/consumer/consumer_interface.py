@@ -11,7 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+import os
+import pika
 
 class mqConsumerInterface:
     def __init__(
@@ -33,29 +34,26 @@ class mqConsumerInterface:
 
         # Bind Binding Key to Queue on the exchange
 
-        # Set-up Callback function for receiving messages
-        pass
+        # Set-up Callback function for receiving messages   
+        pass     
 
     def on_message_callback(
         self, channel, method_frame, header_frame, body
     ) -> None:
         # Acknowledge message
-
         #Print message (The message is contained in the body parameter variable)
-
         pass
+
 
     def startConsuming(self) -> None:
         # Print " [*] Waiting for messages. To exit press CTRL+C"
-
         # Start consuming messages
-        pass
-    
+        pass    
     def __del__(self) -> None:
         # Print "Closing RMQ connection on destruction"
-        
+                
         # Close Channel
 
         # Close Connection
-        
-        pass
+        pass        
+
